@@ -67,3 +67,18 @@
     justify-content: space-between;
     padding: 10px;
   }
+  .moviedata{
+    color: white;
+    padding: 30px;
+    display: flex;
+    border-bottom: 2px solid yellow;
+    gap: 20px;
+  }
+  .movieposter{
+    width: 275px;
+    height: 362px;
+  }
+  .moviedis{
+    display: flex;
+    flex-direction: column;
+  }

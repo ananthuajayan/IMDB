@@ -2,10 +2,10 @@ import React from 'react';
 import '../index.css';
 
 const moviecontainer = (props) => {
-    const{Poster,Title,Type,Year,}=props.movie
+    const{Poster,Title,Type,Year,imdbID}=props.movie
 
   return (
-        <div className='movielist' >
+        <div className='movielist' onClick={()=>props.setselectedmovie(imdbID)}>
             <div className='imagetag'>
                 <img src={Poster} alt="movie-pic" />
             </div>
