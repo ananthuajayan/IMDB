@@ -6,13 +6,15 @@ const API_KEY = '152b288f'
 function App() {
   const[search,setsearch]=useState();
   const[time,setTime]=useState();
+  const[movie,setmovie]=useState([]);
 
  
   const fetchData = async(searchString)=>{
-   const response  = await axios.get(`https://www.omdbapi.com/?s=${searchString}&apikey=${API_KEY}`)
-   console.log(response)
-
+   const response  = await axios.get(`https://www.omdbapi.com/?s=${searchString}&apikey=${API_KEY}`);
+   console.log(response);
+   setmovie(response.data.Search || []);
   }
+
   const onTextChange = (e)=>{
     clearTimeout(time)
     setsearch(e.target.value);
@@ -32,11 +34,12 @@ function App() {
           </div>
         </div>
         <div className="moviecontainer">
-        <Moviecomponents />
-        <Moviecomponents />
-        <Moviecomponents />
-        <Moviecomponents /> 
-        <Moviecomponents />
+       
+       {movie.length === 0? "SEARCH A MOVIE" : movie.map((movie,index)=> {
+        return(
+          <Moviecomponents key={index} movie={movie} /> 
+        )
+       })}
         </div>
         
       </div>
