@@ -22,22 +22,21 @@ const Moviedetails = (props) => {
         <div className='movieposter'>
             <img src={moviepost.Poster} alt="movie poster" />
         </div>
-        <div className='moviedis'>
-           <div>{moviepost.Title}</div>            
-         
-           <div>{moviepost.Title}</div>            
-         
-           <div>{moviepost.Title}</div>            
-         
-           <div>{moviepost.Title}</div>            
-         
-           <div>{moviepost.Title}</div>            
-         
-           <div>{moviepost.Title}</div>            
-         
-           <div>{moviepost.Title}</div>            
-         
-        </div>
+          <div className='moviedis'>
+            <div><span>Movie Title : </span>{moviepost.Title}</div>            
+            <div><span>Actors : </span>{moviepost.Actors}</div>            
+            <div><span>Plot : </span>{moviepost.Plot}</div>            
+            <div><span>Released Date : </span>{moviepost.Released}</div>            
+            <div><span>Duration : </span>{moviepost.Runtime}</div>            
+            <div><span>Box-Office : </span>{moviepost.BoxOffice}</div>            
+            <div><span>Director : </span>{moviepost.Director}</div>     
+            <div><span>Genre : </span>{moviepost.Genre}</div>    
+            <div><span>Rating : </span>{moviepost.Rated}</div>    
+            <div><span>IMDB Rating : </span>{moviepost.imdbRating}</div>    
+            <div><span>Type : </span>{moviepost.Type}</div>    
+            <div><span>Awards : </span>{moviepost.Awards}</div>          
+          
+          </div>
     </div>
   )
 }

@@ -2,16 +2,19 @@
     margin: 0;
     box-sizing: border-box;
   }
-  #root{
-    background-color: black;
-  }
+ 
   .header-section{
     display: flex;
     padding: 10px 20px;
     justify-content: space-between;
     align-items: center;
     color: yellow;
+    background-color: black;
     border-bottom: 2px solid yellow;
+    opacity: 10;
+    position: fixed;
+    top: 0;
+    width: 100%;
   }
   .searchbar-container{
     width: 600px;
@@ -33,15 +36,24 @@
     flex-direction: row;
     flex-wrap: wrap;
     padding: 30px;
-    color:black;
     gap: 20px;
+    min-height: 100vh;
+    background-image: url('https://c8.alamy.com/comp/2M4BRNX/poland-17th-dec-2022-in-this-photo-illustration-an-imdb-logo-seen-displayed-on-a-smartphone-credit-sopa-images-limitedalamy-live-news-2M4BRNX.jpg');
+    background-size: cover; /* Adjust to 'contain' or other values as needed */
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+    width: 100%;
+    margin-top: 71px;
+    
   }
   .movielist{
     display: flex;
     flex-direction: column;
-    width: 275px;
+    width: 270px;
     box-shadow: 0 3px 10px 0 rgb(249, 249, 132);
-    background-color: white;
+    background-color: rgb(19, 18, 18);
+    color: yellow;
+   
   }
   img{
     width: 100%;
@@ -54,7 +66,6 @@
   .title{
     font-size: 18px;
     font-weight: 600;
-    color: rgb(171, 27, 27);
     padding: 10px;
     white-space: nowrap;
     max-width: 300px;
@@ -71,14 +82,32 @@
     color: white;
     padding: 30px;
     display: flex;
+    flex-direction: column;
     border-bottom: 2px solid yellow;
     gap: 20px;
+    background-color: black;
+    margin-top: 71px;
+    max-width: 500px;
+    
   }
   .movieposter{
-    width: 275px;
-    height: 362px;
+    width: 450px;
+    height: 450px;
   }
   .moviedis{
     display: flex;
     flex-direction: column;
+    gap: 10px;
+    padding-top: 5px;
+    
+  }
+  .moviedis span{
+    color: yellow;
+  }
+  .split{
+    display: flex;
+    /* position: relative; */
+  }
+  .moviedetails{
+    background-color:rgb(19, 18, 18);
   }
